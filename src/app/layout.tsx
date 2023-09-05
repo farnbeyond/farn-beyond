@@ -6,7 +6,7 @@ import { client } from '@/lib/contentful/client'
 
 const lato = Lato({ weight: '400', subsets: ['latin'] })
 
-export const getSiteData = async () => {
+const getSiteData = async () => {
   const res = await client.getEntries({ content_type: 'site' })
   return res.items[0]
 }
