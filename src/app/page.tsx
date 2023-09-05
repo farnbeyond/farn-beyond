@@ -1,7 +1,7 @@
 import ContentfulImage from '@/components/ContentfulImage'
 import { client } from '@/lib/contentful/client'
 
-export const getPageData = async (page: string) => {
+const getPageData = async (page: string) => {
   const res = await client.getEntries({ content_type: 'page', 'fields.title': page })
   return res.items[0]
 }
