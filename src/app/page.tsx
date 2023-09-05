@@ -6,7 +6,7 @@ export const getPageData = async (page: string) => {
   return res.items[0]
 }
 
-export const getSection = async (section: string) => {
+const getSection = async (section: string) => {
   const res = await client.getEntries({ content_type: 'section', 'fields.title': section })
   return res.items[0]
 }
