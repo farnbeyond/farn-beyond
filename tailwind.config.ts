@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const twColors = require('tailwindcss/colors')
 
 const config: Config = {
   content: [
@@ -7,14 +8,40 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: twColors.black,
+      white: twColors.white,
+      gray: twColors.slate,
+      //Brand colors:
+      background: '#FFFFFF',
+      foreground: '#0E1636',
+      primary: {
+        DEFAULT: '#132C94',
+        foreground: '#FFFFFF',
+        hover: '#213CA9',
+      },
+      secondary: {
+        DEFAULT: '#07603B',
+        foreground: '#FFFFFF',
+        hover: '#18754F',
+      },
+      muted: '#444859',
+      faded: '#C6C8D3',
+    },
+    fontFamily: {
+      body: ['Lato'],
+      display: ['Roboto Condensed'],
+      mono: ['Roboto Mono'],
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      maxWidth: {
+        layout: '64rem',
+        content: '48rem',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 export default config
