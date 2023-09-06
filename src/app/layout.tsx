@@ -2,16 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 import Hero from '@/components/layout/Hero'
-import { client } from '@/lib/contentful/client'
 import Footer from '@/components/layout/Footer'
+import { getSiteData } from '@/lib/contentful/service'
 
 const lato = Lato({ weight: '400', subsets: ['latin'] })
-
-const getSiteData = async () => {
-  const res = await client.getEntries({ content_type: 'site', 'fields.title': "Far'n Beyond" })
-  console.log('🌈RES', res)
-  return res.items[0]
-}
 
 export const metadata: Metadata = {
   title: "Far'n Beyond",

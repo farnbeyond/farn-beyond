@@ -1,16 +1,6 @@
 import ContentfulImage from '@/components/ContentfulImage'
 import Markdown from '@/components/ui/Markdown'
-import { client } from '@/lib/contentful/client'
-
-const getPageData = async (page: string) => {
-  const res = await client.getEntries({ content_type: 'page', 'fields.title': page })
-  return res.items[0]
-}
-
-const getSection = async (section: string) => {
-  const res = await client.getEntries({ content_type: 'section', 'fields.title': section })
-  return res.items[0]
-}
+import { getPageData, getSection } from '@/lib/contentful/service'
 
 export default async function Home() {
   const page = await getPageData('Landing Page')
@@ -28,7 +18,7 @@ export default async function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="typo-p indent-4">
                 <Markdown
-                  className="prose-a:text-secondary prose-a:hover:text-secondary-hover prose-a:underline"
+                  className="prose-a:text-secondary prose-a:hover:text-secondary-hover prose-a:underline prose-p:my-2"
                   markdown={text}
                 />
               </div>

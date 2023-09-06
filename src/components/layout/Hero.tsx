@@ -8,8 +8,6 @@ interface HeroProps {
 }
 
 export default function Hero({ siteData }: HeroProps) {
-  //console.log('⭐ CTAs:', siteData.fields.callsToAction)
-
   const { heroTitle, heroPicture, callsToAction, heroDescription, title } = siteData.fields
   const heroUrl = heroPicture.fields.file.url
 

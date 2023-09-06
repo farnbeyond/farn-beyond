@@ -1,10 +1,5 @@
-import { client } from '@/lib/contentful/client'
 import Markdown from '@/components/ui/Markdown'
-
-const getSection = async (section: string) => {
-  const res = await client.getEntries({ content_type: 'section', 'fields.title': section })
-  return res.items[0]
-}
+import { getSection } from '@/lib/contentful/service'
 
 interface FooterProps {}
 
