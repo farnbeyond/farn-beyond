@@ -31,8 +31,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
         <main className="max-w-content w-content mx-auto px-6 sm:px-8 py-16">{children}</main>
 
-        <footer className="bg-foreground italic items-center rounded-t-xl shadow-lg px-6 sm:px-8 py-16">
-          <p className="typo-small text-center text-faded">{footer.fields.text}</p>
+        <footer className=" bg-foreground italic items-center rounded-t-xl shadow-lg px-6 sm:px-8 py-16">
+          <div className="max-w-content w-content mx-auto">
+            <p className="typo-small text-center text-faded">{footer.fields.text}</p>
+          </div>
         </footer>
       </body>
     </html>
