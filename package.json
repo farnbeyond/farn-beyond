@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.1",
+    "@radix-ui/react-slot": "^1.0.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "contentful": "^10.5.1",
     "eslint": "8.48.0",

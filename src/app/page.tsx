@@ -54,7 +54,7 @@ export default async function Home() {
                   className="object-cover rounded-lg shadow-lg w-full"
                 />
                 <span className="typo-h3">{name}</span>
-                <small className="typo-small">{role}</small>
+                <small className="typo-small text-muted/80">{role}</small>
               </div>
             )
           })}

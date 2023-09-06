@@ -10,7 +10,7 @@
   }
 
   .typo-title {
-    @apply font-display text-4xl sm:text-6xl font-black uppercase;
+    @apply font-display text-5xl sm:text-6xl font-black uppercase;
   }
 
   .typo-h1 {
@@ -30,11 +30,11 @@
   }
 
   .typo-p {
-    @apply leading-7 [&:not(:first-child)]:my-3;
+    @apply leading-7 [&:not(:first-child)]:my-3 tracking-normal;
   }
 
   .typo-small {
-    @apply text-sm font-bold text-muted/70;
+    @apply text-sm tracking-normal;
   }
 
   /* main {
