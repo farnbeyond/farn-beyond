@@ -1,4 +1,5 @@
 import ContentfulImage from '@/components/ContentfulImage'
+import Markdown from '@/components/ui/Markdown'
 import { client } from '@/lib/contentful/client'
 
 const getPageData = async (page: string) => {
@@ -14,7 +15,6 @@ const getSection = async (section: string) => {
 export default async function Home() {
   const page = await getPageData('Landing Page')
   const membersSection = await getSection('Members')
-  //console.log(membersSection.fields.list)
 
   return (
     <div className="flex flex-col gap-16">
@@ -26,7 +26,12 @@ export default async function Home() {
           <section key={section.sys.id}>
             <h2 className="typo-h2">{title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <p className="typo-p indent-4">{text}</p>
+              <div className="typo-p indent-4">
+                <Markdown
+                  className="prose-a:text-secondary prose-a:hover:text-secondary-hover prose-a:underline"
+                  markdown={text}
+                />
+              </div>
               <ContentfulImage
                 src={url}
                 height={details.image.height}

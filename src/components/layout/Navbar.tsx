@@ -21,14 +21,14 @@ export const Navbar: FC<NavbarProps> = ({ siteData }) => {
           className="object-contain h-7 object-left opacity-80 hover:opacity-100 transition-all"
         />
       </Link>
-      <div id="nav-items" className="flex gap-4">
+      {/* <div id="nav-items" className="flex gap-4">
         <Link className="hover:underline" href="/">
           About
         </Link>
         <Link className="hover:underline" href="/">
           Contact
         </Link>
-      </div>
+      </div> */}
     </nav>
   )
 }
