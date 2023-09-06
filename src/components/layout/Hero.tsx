@@ -25,7 +25,7 @@ export default function Hero({ siteData }: HeroProps) {
       <div className="flex flex-col max-w-content w-content mx-auto min-h-[40vh] px-6 sm:px-8  ">
         <Navbar siteData={siteData} />
         <div className="flex flex-grow flex-col justify-center pt-12 pb-14 gap-3 items-center sm:items-start">
-          <h1 className="typo-title text-center sm:text-left">{heroTitle}</h1>
+          <h1 className="typo-title text-center sm:text-left mb-4">{heroTitle}</h1>
           {heroDescription && <p className="typo-p text-faded italic">{heroDescription}</p>}
           <div className="flex gap-4 flex-col sm:flex-row">
             {callsToAction.map((cta: any) => {

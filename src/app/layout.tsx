@@ -8,7 +8,8 @@ import Footer from '@/components/layout/Footer'
 const lato = Lato({ weight: '400', subsets: ['latin'] })
 
 const getSiteData = async () => {
-  const res = await client.getEntries({ content_type: 'site' })
+  const res = await client.getEntries({ content_type: 'site', 'fields.title': "Far'n Beyond" })
+  console.log('🌈RES', res)
   return res.items[0]
 }
 
