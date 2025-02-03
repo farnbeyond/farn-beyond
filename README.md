@@ -13,4 +13,4 @@ We're currently in the process of recording new songs. Stay in touch by followin
 - UPDATE: Content update with new photoshoot.
 - UPDATE: Color scheme that fit with our new shoot.
 - FIXED: Footer styling
--  TODO: For some reason the files are rendered statically on the live version of the site. 
+- TODO: For some reason the files are rendered statically on the live version of the site. 
